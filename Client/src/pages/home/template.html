@@ -1,11 +1,13 @@
 <div id="root">
   <section class="Container">
     <header class="Header">
-      <h1 class="DisplayTitle">Hello World!</h1>
-      <p>Edit the template and watch the magic happening.</p>
-    </header>
-    <main class="Content">
-  
+      <h1 data-name="{{name}}" class="DisplayTitle">{{name}}!</h1>
+      <p ref:to="titleElement">Edit the template and watch the magic happening.</p>
+    <main class="Content">                                
+      <button on:click="countUp" id="bold-btn">Click me!</button>
+      <div ref:to="tal" id="editor"  >
+       {{tal}}
+      </div>
     </main>
   </section>
   
